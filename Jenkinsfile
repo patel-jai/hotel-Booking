@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo "Building PHP project..."
                 // Add commands to build your PHP project here
-                bat 'composer install'
+                bat 'C:\composer\composer install'
             }
         }
         stage('Testing') {
