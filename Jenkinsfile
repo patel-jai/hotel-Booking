@@ -6,31 +6,21 @@ pipeline {
             steps {
                 echo "Building PHP project..."
                 // Add commands to build your PHP project here
-                phpunit 'composer install' // Example command for installing dependencies with Composer
+                sh 'composer install' // Example command for installing dependencies with Composer
             }
         }
         stage('Testing') {
             steps {
                 echo "Running tests..."
-                // Add commands to run tests for your PHP project here
-                sh 'phpunit' // Example command for running PHPUnit tests
+                // Run PHPUnit tests
+                phpunit (
+                    bootstrap: 'vendor/autoload.php', // Path to the PHPUnit bootstrap file
+                    configurationFile: 'phpunit.xml', // Path to PHPUnit configuration file
+                    logJunit: true // Generate JUnit-style test report
+                )
             }
         }
-        stage('Deployment') {
-            steps {
-                echo "Deploying the PHP project..."
-                // Add commands to deploy your PHP project here
-                // For example, you might deploy to a web server using SCP or FTP
-                // Or use a deployment tool like Deployer or Capistrano
-            }
-        }
-        stage('Monitoring') {
-            steps {
-                echo "Setting up monitoring and alerts..."
-                // Add commands to set up monitoring and alerts for your PHP project here
-                // This might involve configuring tools like New Relic, Nagios, or Prometheus
-            }
-        }
+        // Add more stages for deployment, monitoring, etc.
     }
 
     post {
