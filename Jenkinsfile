@@ -12,8 +12,7 @@ pipeline {
         stage('Testing') {
             steps {
                 echo "Running tests..."
-                // Add commands to run tests for your PHP project here
-                
+                // Add commands to run tests for your PHP project here  
             }
         }
         stage('Deployment') {
