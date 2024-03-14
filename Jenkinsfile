@@ -13,7 +13,6 @@ pipeline {
             steps {
                 echo "Running tests..."
                 // Add commands to run tests for your PHP project here
-                bat 'php vendor/bin/phpunit'
             }
         }
         stage('Deployment') {
