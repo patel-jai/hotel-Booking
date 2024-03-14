@@ -1,0 +1,16 @@
+{
+    "name": "your-project-name",
+    "description": "Description of your PHP project",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        // Here you can specify any dependencies your project needs
+        // For example:
+        // "vendor/package": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
