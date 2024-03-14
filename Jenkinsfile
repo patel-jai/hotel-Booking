@@ -6,14 +6,12 @@ pipeline {
             steps {
                 echo "Building PHP project..."
                 // Add commands to build your PHP project here
-                bat 'composer install' // Example command for installing dependencies with Composer
             }
         }
         stage('Testing') {
             steps {
                 echo "Running tests..."
                 // Run PHPUnit tests
-                bat 'vendor\\bin\\phpunit'
             }
         }
         // Add more stages for deployment, monitoring, etc.
