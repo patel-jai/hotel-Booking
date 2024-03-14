@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo "Building PHP project..."
                 // Add commands to build your PHP project here
-                sh 'composer install' // Example command for installing dependencies with Composer
+                phpunit 'composer install' // Example command for installing dependencies with Composer
             }
         }
         stage('Testing') {
