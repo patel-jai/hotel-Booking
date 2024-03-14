@@ -13,7 +13,6 @@ pipeline {
             steps {
                 echo "Running tests..."
                 // Add commands to run tests for your PHP project here  
-                bat 'C:\\composer\\vendor\\bin\\phpunit'
             }
         }
         stage('Deployment') {
