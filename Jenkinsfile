@@ -12,15 +12,11 @@ pipeline {
             steps {
                 script {
                     echo "Running tests..."
-                    def phpunitExecutable = bat(script: 'vendor\\bin\\phpunit --version', returnStdout: true).trim()
-                    if (phpunitExecutable) {
-                        bat "vendor\\bin\\phpunit"
-                    } else {
-                        error "PHPUnit not found. Make sure it's installed as a development dependency via Composer."
-                    }
+                   
+                        bat "C:\\composer\\vendor\\bin\\phpunit"
+                    } 
                 }
             }
-        }
         stage('Deployment') {
             steps {
                 echo "Deploying the PHP project..."
