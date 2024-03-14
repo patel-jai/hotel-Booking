@@ -12,7 +12,6 @@ pipeline {
             steps {
                 script {
                     echo "Running tests..."
-                    // Locate PHPUnit executable using Composer's autoloader
                     def phpunitExecutable = bat(script: 'vendor\\bin\\phpunit --version', returnStdout: true).trim()
                     if (phpunitExecutable) {
                         bat "vendor\\bin\\phpunit"
