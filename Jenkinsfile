@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Testing') {
             steps {
-                bat 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Hotel Booking\\bin\\phpunit'
+                bat 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Hotel Booking\\vendor\\bin\\phpunit'
             }
         }
         stage('Deployment') {
