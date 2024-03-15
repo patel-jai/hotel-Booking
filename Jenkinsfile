@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deployment') {
             steps {
-                bat 'ssh user@your_server "cd /path/to/your/project && git pull origin master && composer install && php artisan migrate"'
+                bat 'ssh git@github.com:patel-jai/hotel-Booking.git "cd https://github.com/patel-jai/hotel-Booking.git && git pull origin master && composer install && php artisan migrate"'
             }
         }
         stage('Monitoring') {
