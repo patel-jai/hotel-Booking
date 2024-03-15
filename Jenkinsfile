@@ -9,19 +9,20 @@ pipeline {
         }
         stage('Testing') {
             steps {
-                script {
-                    echo "Running tests..."
-                } 
+                bat 'C:\\composer\\vendor\\bin\\phpunit'
             }
         }
         stage('Deployment') {
             steps {
-                echo "Deploying the PHP project..."                
+                bat 'ssh user@your_server "cd /path/to/your/project && git pull origin master && composer install && php artisan migrate"'
             }
         }
         stage('Monitoring') {
             steps {
-                echo "Setting up monitoring and alerts..."
+                bat 'curl -Ls https://download.newrelic.com/install/newrelic-cli/scripts/install.ps1 | Invoke-Expression'
+                bat 'newrelic install --skip-proxy --quiet'
+                bat 'newrelic alert-conditions list'
+                bat 'newrelic alert-policies list'
             }
         }
     }
