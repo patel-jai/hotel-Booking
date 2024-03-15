@@ -11,8 +11,6 @@ pipeline {
             steps {
                 bat 'C:\\composer\\composer require --dev phpunit/phpunit'
                 bat 'vendor/bin/phpunit tests'
-'
-'
             }
         }
         stage('Deployment') {
