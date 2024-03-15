@@ -18,11 +18,6 @@ pipeline {
                 echo "Deployment"
             }
         }
-        stage('Monitoring') {
-            steps {
-                echo "Monitoring"
-            }
-        }
     }
 
     post {
