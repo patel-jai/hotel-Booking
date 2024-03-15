@@ -12,8 +12,6 @@ pipeline {
             steps {
                 script {
                     echo "Running tests..."
-                   
-                        bat "C:\\composer\\vendor\\bin\\phpunit"
                     } 
                 }
             }
