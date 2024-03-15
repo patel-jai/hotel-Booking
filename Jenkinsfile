@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building PHP project..."
-                bat 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Hotel Booking\\composer install'
+                bat 'C:\\composer\\composer install'
             }
         }
         stage('Testing') {
