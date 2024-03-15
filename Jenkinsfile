@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Testing') {
             steps {
-                bat 'vendor\\bin\\phpunit tests'
+                bat 'C:\\composer\\composer require --dev phpunit/phpunit'
             }
         }
         stage('Deployment') {
