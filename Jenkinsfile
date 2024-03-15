@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deployment') {
             steps {
-                bat 'ssh git@github.com:patel-jai/hotel-Booking.git'
+                bat '"C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Hotel Booking\\vendor\\bin\\phpunit" tests'
             }
         }
         stage('Monitoring') {
