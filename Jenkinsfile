@@ -11,7 +11,7 @@ pipeline {
         stage('Testing') {
             steps {
                echo "Testing"
-                bat 'vendor\\bin\\phpunit test'
+                bat 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\hotel\\tests\\vendor\bin\phpunit'
             }
         }
         stage('Deployment') {
