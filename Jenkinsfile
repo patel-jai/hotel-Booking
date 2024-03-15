@@ -10,7 +10,6 @@ pipeline {
         }
         stage('Testing') {
             steps {
-               echo "Testing"
                 bat 'vendor\\bin\\phpunit test'
             }
         }
