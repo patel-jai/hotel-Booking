@@ -6,6 +6,6 @@ class test extends TestCase
 {
     public function testSomething()
     {
-        // Your test logic here
+        echo "Hello"
     }
 }
