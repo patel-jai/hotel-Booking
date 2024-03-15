@@ -21,7 +21,6 @@ pipeline {
                 echo "Deploying the PHP project..."
                 // Add commands to deploy your PHP project here
                 // Example: Copy files to the deployment server
-                bat 'xcopy /s "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Hotel Booking" "\\deployment\\server\\path"'
             }
         }
         stage('Monitoring') {
