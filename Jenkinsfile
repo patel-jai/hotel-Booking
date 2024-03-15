@@ -1,4 +1,4 @@
-pipeline {
+ {
     agent any
     
     stages {
@@ -10,9 +10,11 @@ pipeline {
         }
         stage('Testing') {
             steps {
-                echo "Running PHPUnit tests..."
+                script {
+                    echo "Running tests..."
+                    } 
+                }
             }
-        }
         stage('Deployment') {
             steps {
                 echo "Deploying the PHP project..."
