@@ -10,11 +10,10 @@ pipeline {
         }
         stage('Testing') {
             steps {
-                script {
-                    echo "Running tests..."
-                    } 
-                }
+                echo "Running PHPUnit tests..."
+                bat 'php vendor/bin/phpunit tests'
             }
+        }
         stage('Deployment') {
             steps {
                 echo "Deploying the PHP project..."
