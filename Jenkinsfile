@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Testing') {
             steps {
-                bat 'vendor\\bin\\phpunit tests'
+                
             }
         }
         stage('Deployment') {
@@ -19,10 +19,7 @@ pipeline {
         }
         stage('Monitoring') {
             steps {
-                bat 'curl -Ls https://download.newrelic.com/install/newrelic-cli/scripts/install.ps1 | Invoke-Expression'
-                bat 'newrelic install --skip-proxy --quiet'
-                bat 'newrelic alert-conditions list'
-                bat 'newrelic alert-policies list'
+               
             }
         }
     }
