@@ -14,7 +14,7 @@
     "autoload": {
         "psr-4": {
             "App\\": "src/",
-            "Tests\\": "tests/" // Add this line to autoload test classes
+            "Tests\\": "tests/"
         }
     }
 }
