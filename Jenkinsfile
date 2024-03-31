@@ -11,7 +11,6 @@ pipeline {
         stage('Testing') {
             steps {
                 bat 'vendor\\bin\\phpunit test'
-                }
             }
         }
         stage('Deployment') {
