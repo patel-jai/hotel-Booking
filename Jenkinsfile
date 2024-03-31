@@ -21,11 +21,18 @@ pipeline {
     }
 
     post {
-        success {
-            echo 'Deployment successful!'
-        }
-        failure {
-            echo 'Deployment failed!'
-        }
+    success {
+        echo 'Deployment successful!'
+        emailext subject: 'Deployment Successful',
+                  body: 'The deployment was successful.',
+                  to: 'pjai11098@gmail.com'
     }
+    failure {
+        echo 'Deployment failed!'
+        emailext subject: 'Deployment Failed',
+                  body: 'The deployment failed.',
+                  to: 'pjai11098@gmail.com'
+    }
+}
+
 }
