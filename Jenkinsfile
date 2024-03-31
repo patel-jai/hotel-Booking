@@ -14,10 +14,14 @@ pipeline {
             }
         }
         stage('Deployment') {
-            steps {
-                bat 'scp -r https://github.com/patel-jai/hotel-Booking.git'
-            }
-        }
+    steps {
+        
+        bat 'git clone https://github.com/patel-jai/hotel-Booking.git'
+        
+        bat 'xcopy /s /e /y hotel-Booking/* test/test.php'
+    }
+}
+
     }
 
     post {
