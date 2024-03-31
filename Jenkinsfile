@@ -18,7 +18,7 @@ pipeline {
         
         bat 'git clone https://github.com/patel-jai/hotel-Booking.git'
         
-        bat 'xcopy /s /e /y hotel-Booking/* test/test.php'
+        bat 'xcopy /y hotel-Booking\test.php test/test.php'
     }
 }
 
