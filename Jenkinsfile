@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Deployment') {
             steps {
-                bat 'scp -r path/to/your/files user@hostname:/path/to/deployment/directory'
+                bat 'scp -r https://github.com/patel-jai/hotel-Booking.git'
             }
         }
     }
