@@ -6,6 +6,7 @@ class test extends TestCase
 {
     public function testSomething()
     {
-        echo "Hello";
+        $result = "Hello";
+        $this->assertEquals("Hello", $result);
     }
 }
