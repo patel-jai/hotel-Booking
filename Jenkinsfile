@@ -10,7 +10,9 @@ pipeline {
         }
         stage('Testing') {
             steps {
+                dir('C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\hotel\\vendor\\bin\\phpunit test') {
                 bat 'vendor\\bin\\phpunit test'
+                }
             }
         }
         stage('Deployment') {
