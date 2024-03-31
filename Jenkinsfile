@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Deployment') {
             steps {
-                echo "Deployment"
+                bat 'scp -r path/to/your/files user@hostname:/path/to/deployment/directory'
             }
         }
     }
