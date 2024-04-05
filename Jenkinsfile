@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'composer install
+                bat 'composer install'
                 bat 'composer require --dev phpunit/phpunit'
                 bat 'php -f test/homepage.php'
             }
