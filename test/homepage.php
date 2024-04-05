@@ -87,7 +87,6 @@ session_start();
         <!-- Login/Register button -->
         <div id="login-register">
             <?php
-            // session_start();
             if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
                 echo '<a href="profile.php" class="login-register-btn">My Profile</a>';
             } else {
@@ -131,4 +130,5 @@ session_start();
             <p>&copy; 2024 Hotel Booking Management System. All rights reserved.</p>
         </div>
     </footer>
-</body></html>
+</body>
+</html>
