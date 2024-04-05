@@ -17,7 +17,7 @@ pipeline {
         stage('Deployment') {
             steps {
                 bat 'git pull https://github.com/patel-jai/hotel-Booking.git'
-                bat 'xcopy /y hotel-Booking\\test\\test.php test'
+                bat 'xcopy /y hotel-Booking\\test\\homepage.php test'
             }
         }
     }
