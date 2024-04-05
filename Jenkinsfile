@@ -27,13 +27,13 @@ pipeline {
             echo 'Deployment successful!'
             emailext subject: 'Deployment Successful',
                       body: 'The deployment was successful.',
-                      to: 'pjai11098@gmail.com'
+                      to: 'pj110098@gmail.com'
         }
         failure {
             echo 'Deployment failed!'
             emailext subject: 'Deployment Failed',
                       body: 'The deployment failed.',
-                      to: 'pjai11098@gmail.com'
+                      to: 'pj110098@gmail.com'
         }
     }
 }
