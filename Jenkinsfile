@@ -18,6 +18,7 @@ pipeline {
             steps {
                 bat 'git pull https://github.com/patel-jai/hotel-Booking.git'
                 bat 'xcopy /y hotel-Booking\\test\\test.php test'
+                bat 'zip -r myapp.zip test.php src/test/'
             }
         }
     }
