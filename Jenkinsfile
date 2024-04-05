@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'C:\\composer\\composer install'
-                bat 'C:\\composer\\composer require --dev phpunit/phpunit'
+                bat 'composer install'
+                bat 'composer require --dev phpunit/phpunit'
                 bat 'php -f test/homepage.php'
             }
         }
