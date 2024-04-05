@@ -6,6 +6,7 @@ pipeline {
             steps {
                 bat 'C:\\composer\\composer install'
                 bat 'C:\\composer\\composer require --dev phpunit/phpunit'
+                bat 'php -1 test/homepage.php'
             }
         }
         stage('Testing') {
@@ -15,10 +16,7 @@ pipeline {
         }
         stage('Deployment') {
             steps {
-                // Clone the GitHub repository
                 bat 'git pull https://github.com/patel-jai/hotel-Booking.git'
-                
-                // Copy the test file from cloned directory to the test directory
                 bat 'xcopy /y hotel-Booking\\test\\test.php test'
             }
         }
