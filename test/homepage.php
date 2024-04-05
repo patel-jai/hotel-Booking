@@ -87,7 +87,7 @@ session_start();
         <!-- Login/Register button -->
         <div id="login-register">
             <?php
-            session_start();
+            // session_start();
             if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
                 echo '<a href="profile.php" class="login-register-btn">My Profile</a>';
             } else {
