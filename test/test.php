@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-require 'homepagelogic.php';
+require 'homepage.php';
 
 class test extends TestCase
 {
