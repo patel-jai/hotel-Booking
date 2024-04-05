@@ -3,6 +3,7 @@
 function getTitle() {
     return "Hotel Booking Management System";
 }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -134,4 +135,4 @@ function getTitle() {
     </footer>
 </body>
 </html>
-?>
+
