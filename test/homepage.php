@@ -1,4 +1,8 @@
 <?php
+
+include 'HomepageLogic.php';
+?>
+<?php
 // Start the session before any output
 session_start();
 ?>
