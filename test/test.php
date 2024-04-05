@@ -2,14 +2,14 @@
 
 use PHPUnit\Framework\TestCase;
 
+require 'homepagelogic.php';
+
 class test extends TestCase
 {
     public function testSomething()
     {     
-        ob_start();
-        include 'homepage.php';
-        $output = ob_get_clean();
-        $this->assertStringContainsString('<title>Hotel Booking Management System</title>', $output);
+        $expectedTitle = "Hotel Booking Management System";
+        $this->assertEquals($expectedTitle, getTitle());
     }
 }
 
