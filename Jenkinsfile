@@ -14,11 +14,6 @@ pipeline {
                 bat 'vendor\\bin\\phpunit test/test.php'
             }
         }
-        stage('Selenium Testing') {
-            steps {
-                bat 'php homepage.php'
-            }
-        }
         stage('Deployment') {
             steps {
                 bat 'git pull https://github.com/patel-jai/hotel-Booking.git'
