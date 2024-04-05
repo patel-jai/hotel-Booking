@@ -1,6 +1,8 @@
 <?php
 
-include 'HomepageLogic.php';
+function getTitle() {
+    return "Hotel Booking Management System";
+}
 ?>
 <?php
 // Start the session before any output
