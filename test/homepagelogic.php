@@ -5,7 +5,6 @@ function getTitle() {
 }
 
 <?php
-// Start the session before any output
 session_start();
 ?>
 <!DOCTYPE html>
