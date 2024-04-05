@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Testing') {
             steps {
-                bat 'vendor\\bin\\phpunit test/homepage.php'
+                bat 'vendor\\bin\\phpunit test/test.php'
             }
         }
         stage('Selenium Testing') {
