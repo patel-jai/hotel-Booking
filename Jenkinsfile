@@ -2,7 +2,7 @@ pipeline {
     agent any 
 
     triggers {
-        pollSCM('') //jayjepal
+        githubPush()
     }
     stages {
         stage('Build') {
