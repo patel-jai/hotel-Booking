@@ -1,5 +1,9 @@
 pipeline {
     agent any
+
+     triggers {
+        scm('') 
+    }
     
     stages {
         stage('Build') {
@@ -18,9 +22,6 @@ pipeline {
             steps {
                 bat 'git pull https://github.com/patel-jai/hotel-Booking.git'
                 bat 'xcopy /y hotel-Booking\\test\\test.php test'
-                bat 'git add .'
-                bat 'git commit -m "Automated deployment"'
-                bat 'git push origin main'
             }
         }
     }
