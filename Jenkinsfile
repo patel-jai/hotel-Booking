@@ -2,7 +2,7 @@ pipeline {
     agent any 
 
     triggers {
-        githubPush() // Trigger the pipeline on every push event in the GitHub repository
+        pollSCM('* * * * *') 
     }
     stages {
         stage('Build') {
