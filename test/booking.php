@@ -1,4 +1,10 @@
 <?php
+
+function getTitle() {
+    return "Hotel Booking Management System";
+}
+?>
+<?php
 session_start(); // Start session (if not already started)
 ?>
 
