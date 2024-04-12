@@ -1,7 +1,7 @@
 <?php
 
-function getTitle() {
-    return "Booking Management System";
+function getTitle1() {
+    return "Hotel Booking Management System";
 }
 ?>
 <?php
