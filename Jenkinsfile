@@ -2,7 +2,7 @@ pipeline {
     agent any 
 
     triggers {
-        pollSCM('* * * * *') //lodo
+        pollSCM('* * * * *')
     }
     stages {
         stage('Build') {
