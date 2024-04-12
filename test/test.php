@@ -3,6 +3,7 @@
 use PHPUnit\Framework\TestCase;
 
 require 'homepage.php';
+require 'booking.php';
 
 class test extends TestCase
 {
