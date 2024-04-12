@@ -5,7 +5,7 @@ function getTitle1() {
 }
 ?>
 <?php
-session_start(); // Start session (if not already started)
+session_start(); 
 ?>
 
 <!DOCTYPE html>
