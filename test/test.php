@@ -5,13 +5,22 @@ use PHPUnit\Framework\TestCase;
 require 'homepage.php';
 require 'booking.php';
 
-class test extends TestCase
+class TestHomePage extends TestCase
 {
-    public function testSomething()
+    public function testHomePageTitle()
     {     
         $expectedTitle = "Hotel Booking Management System";
         $this->assertEquals($expectedTitle, getTitle());
+    }
+}
+
+class TestBookingPage extends TestCase
+{
+    public function testBookingPageTitle()
+    {     
+        $expectedTitle = "Hotel Booking Management System";
         $this->assertEquals($expectedTitle, getTitle1());
     }
 }
+
 
