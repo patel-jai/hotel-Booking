@@ -11,6 +11,7 @@ class test extends TestCase
     {     
         $expectedTitle = "Hotel Booking Management System";
         $this->assertEquals($expectedTitle, getTitle());
+        $this->assertEquals($expectedTitle, getTitle1());
     }
 }
 
