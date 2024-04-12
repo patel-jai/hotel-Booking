@@ -10,6 +10,7 @@ pipeline {
                 bat 'composer install'
                 bat 'composer require --dev phpunit/phpunit'
                 bat 'php -f test/homepage.php'
+                bat 'php -f test/booking.php'
             }
         }
         stage('Testing') {
