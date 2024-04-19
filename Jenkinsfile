@@ -9,8 +9,8 @@ pipeline {
             steps {
                 bat 'composer install'
                 bat 'composer require --dev phpunit/phpunit'
-                bat 'php  test/homepage.php'
-                bat 'php  test/booking.php'
+                bat 'php -f test/homepage.php'
+                bat 'php -f test/booking.php'
             }
         }
         stage('Testing') {
