@@ -3,6 +3,7 @@ pipeline {
 
     triggers {
         githubPush(branch: 'main')
+        pollSCM('* * * * *')
     }
     stages {
         stage('Build') {
