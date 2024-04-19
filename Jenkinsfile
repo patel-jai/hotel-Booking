@@ -5,13 +5,6 @@ pipeline {
         pollSCM('* * * * *')
     }
     stages {
-         stage('Pull from GitHub') {
-            steps {
-                script {
-                    bat 'git pull https://github.com/patel-jai/hotel-Booking.git main'
-                }
-            }
-        }
         stage('Build') {
             steps {
                 bat 'composer install'
