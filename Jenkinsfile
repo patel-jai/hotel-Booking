@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Deployment') {
             steps {
-                bat 'git pull https://github.com/patel-jai/hotel-Booking.git'
+                bat 'git pull https://github.com/patel-jai/hotel-Booking.git main'
                 bat 'xcopy /y hotel-Booking\\test\\test.php'
             }
         }
