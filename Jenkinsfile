@@ -1,9 +1,9 @@
 pipeline {
     agent any 
 
-   triggers {
-        githubPush(branch: 'main') 
-   }
+    triggers {
+        pollSCM('* * * * *') 
+    }
     stages {
         stage('Build') {
             steps {
