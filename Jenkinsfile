@@ -2,7 +2,8 @@ pipeline {
     agent any 
 
     triggers {
-        pollSCM('* * * * *')
+        git branch: 'main', 
+            poll: true
     }
     stages {
         stage('Build') {
@@ -20,7 +21,7 @@ pipeline {
         }
         stage('Deployment') {
             steps {
-                bat 'git pull https://github.com/patel-jai/hotel-Booking.git main'
+                bat 'git pull https://github.com/patel-jai/hotel-Booking.git'
                 bat 'xcopy /y hotel-Booking\\test\\test.php'
             }
         }
