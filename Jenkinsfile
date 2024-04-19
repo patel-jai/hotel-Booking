@@ -1,9 +1,9 @@
 pipeline {
     agent any 
 
-    triggers {
-        pollSCM('* * * * *')
-    }
+    // triggers {
+    //     pollSCM('* * * * *')
+    // }
     stages {
         stage('Build') {
             steps {
@@ -29,6 +29,11 @@ pipeline {
     post {
         success {
             echo 'Deployment successful!'
+            script {
+                bat 'git add .'
+                bat 'git commit -m "Automated deployment"'
+                bat 'git push origin main'
+            }
             emailext subject: 'Deployment Successful',
                       body: 'The deployment was successful.',
                       to: 'pj110098@gmail.com'
